@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion project.hasProperty('compileSdkVersion') ? project.compileSdkVersion : 23
+    compileSdkVersion project.hasProperty('compileSdkVersion') ? Integer.valueOf(project.compileSdkVersion) : 23
     buildToolsVersion project.hasProperty('buildToolsVersion') ? project.buildToolsVersion : "23.0.1"
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion project.hasProperty('targetSdkVersion') ? project.targetSdkVersion : 22
+        targetSdkVersion project.hasProperty('targetSdkVersion') ? Integer.valueOf(project.targetSdkVersion) : 22
         versionCode 1
         versionName "1.0"
         ndk {
